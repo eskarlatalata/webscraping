@@ -1,10 +1,10 @@
 # webscraping
 waltmart scraping
 
-##Purpose
+## Purpose
 Tuis repo contains crawlers for mexican supermarkets to track products prices
 
-###Rules
+### Rules
 
 - Always comply with `robots.txt`policy for all websites.
 - Never trigger concurrent requests for the same website, always make no mora than one request every 10 seconds.

@@ -5,11 +5,11 @@ import time
 
 
 #un diccionario
-urls = {
+stores = {
 	
 	"chedraui":{
-	   "base_url": "https://www.chedraui.com.mx/p/{productNumber}",
-	   "productNumber":[
+	   "url": "https://www.chedraui.com.mx/p/{productNumber}",
+	   "productNumbers":[
 	     {"product":"Media Crema Nestlé Lata 225g",
           "productNumber":"000000000003019751"
 	     }
@@ -37,13 +37,19 @@ def  save_result(file_name:str,source_code:str) -> str:
     """
 	pass
 
-def main(urls:dict):
-	pass
+def main(stores:dict):
+	for store in stores:
+		base_url = stores[store]['url']
+
+		for product in stores[store]['productNumbers']:
+			url = base_url.format(**product)
+			print(url)
+
 
 
 if __name__ == "__main__":
-	main(urls)
-	
+	main(stores)
+
 
 
 
